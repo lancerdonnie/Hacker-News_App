@@ -24,13 +24,19 @@ const NavBar = props => {
     <div>
       <nav className='bg-primary row'>
         <h1 className='h4 py-2 col-6'>HACKERNEWS by Lancer_Donnie</h1>
-        <form onSubmit={handleSubmit} className=' align-self-center col col-4'>
+        <form
+          onSubmit={handleSubmit}
+          className=' align-self-center  col-6 px-auto'
+        >
           <input
             onChange={handleChange}
             value={search}
             className='search'
             type='search'
           />
+          <button type='submit' className='btn btn-dark search-btn 5'>
+            search
+          </button>
           {alert && <Alert message='Please enter a valid input' />}
         </form>
       </nav>

@@ -3,7 +3,7 @@ import Content from './Content';
 import { NewsContext } from '../App';
 
 const MainContent = () => {
-  const { state, dispatch } = useContext(NewsContext);
+  const { state } = useContext(NewsContext);
   const handleScroll = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {

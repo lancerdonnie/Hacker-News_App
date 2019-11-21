@@ -28,22 +28,20 @@ a {
 .inner-content {
   background-color: yellow;
   margin-bottom: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 0.3rem;
-}
-.lead {
-  width: 20%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
+
 .trail {
   width: 23%;
   display: flex;
   justify-content: space-between;
 }
 
-.spinner-border {
-  /* align-self: center; */
+.search-btn {
+  padding: 1px 2px;
 }
 #myBtn {
   /* display: none; */
@@ -69,4 +67,11 @@ a {
   display: inline;
   margin-left: 20px;
   padding: 0.2rem;
+}
+.h2 {
+  max-width: 70%;
+  width: 70%;
+}
+.others {
+  margin-right: 40px;
 }

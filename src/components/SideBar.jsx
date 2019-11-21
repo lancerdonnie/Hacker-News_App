@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { NewsContext } from '../App';
 
 const SideBar = () => {
-  const { _, dispatch } = useContext(NewsContext);
+  const state = useContext(NewsContext);
   const handleChange = e => {
-    dispatch({ type: 'set_tag', tag: e.target.id });
+    state.dispatch({ type: 'set_tag', tag: e.target.id });
   };
   return (
     <div className='sidebar'>
@@ -12,11 +12,11 @@ const SideBar = () => {
       <ul className=''>
         <li>
           <input onChange={handleChange} type='radio' name='tag' id='story' />
-          stories
+          <label htmlFor='story'>stories</label>
         </li>
         <li>
           <input onChange={handleChange} type='radio' name='tag' id='comment' />
-          comments
+          <label htmlFor='comment'>comments</label>
         </li>
       </ul>
     </div>
