@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import NavBar from './components/NavBar';
 import SideBar from './components/SideBar';
 import MainContent from './components/MainContent';
@@ -22,7 +22,7 @@ function App() {
       <NavBar />
       <div className='main mt-4'>
         <SideBar />
-        {Object.entries(newsContext.state.res).length === 0
+        {newsContext.state.res.length === 0
           ? null
           : newsContext.state.loading === 2 && <MainContent />}
         {newsContext.state.loading === 1 && (
@@ -32,10 +32,10 @@ function App() {
         )}
       </div>
 
-      {Object.entries(newsContext.state.res).length !== 0 ? (
+      {newsContext.state.res.length !== 0 ? (
         <div>
           <button onClick={nextPage}>next</button>
-          {newsContext.state.page !== 0 && (
+          {newsContext.state.page > 0 && (
             <button onClick={prevPage}>prev</button>
           )}
         </div>
