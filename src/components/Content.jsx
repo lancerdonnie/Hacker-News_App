@@ -21,16 +21,16 @@ const Content = props => {
         </a>
       </div>
       <div>
-        <span className='others'>By {author}</span>
-        <span>{points} points</span>
+        <span className='others text-success'>By {author}</span>
+        <span className='text-success'>{points} points</span>
       </div>
       <div
-        className='text-muted'
+        className='text-dark'
         dangerouslySetInnerHTML={{ __html: text || comment_text }}
       ></div>
       <div className='trail'>
-        <span>{time[0]}</span>
-        <span>{time[1].slice(0, -5)}</span>
+        <span className='text-muted'>{time[0]}</span>
+        <span className='text-muted'>{time[1].slice(0, -5)}</span>
       </div>
     </div>
   );

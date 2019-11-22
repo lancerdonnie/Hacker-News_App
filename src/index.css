@@ -8,6 +8,10 @@ a {
 }
 .search {
   height: 70%;
+  outline: none;
+  border-radius: 0.3rem;
+  border: 2px solid white;
+  padding: 4px;
 }
 .main {
   display: flex;
@@ -41,7 +45,8 @@ a {
 }
 
 .search-btn {
-  padding: 1px 2px;
+  padding: 2px;
+  margin-bottom: 3px;
 }
 #myBtn {
   /* display: none; */
@@ -74,4 +79,8 @@ a {
 }
 .others {
   margin-right: 40px;
+}
+.hov label,
+.hov input {
+  cursor: pointer;
 }

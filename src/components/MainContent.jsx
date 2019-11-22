@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Content from './Content';
-import { NewsContext } from '../App';
+import NewsContext from '../context/News/NewsContext';
 
 const MainContent = () => {
   const { state } = useContext(NewsContext);
@@ -14,7 +14,7 @@ const MainContent = () => {
   return (
     <>
       <div className='content'>
-        {state.map(hit => {
+        {state.res.map(hit => {
           return <Content key={hit.objectID} hit={hit} />;
         })}
       </div>

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Alert from './Alert';
+import NewsContext from '../context/News/NewsContext';
 
 const NavBar = props => {
+  const newsContext = useContext(NewsContext);
   const [search, setSearch] = useState('');
   const [alert, setAlert] = useState(false);
 
@@ -17,13 +19,15 @@ const NavBar = props => {
       }, 3000);
       return;
     }
-    props.handleSubmit(search);
+    newsContext.handleSubmit(search);
     setSearch('');
   };
   return (
     <div>
       <nav className='bg-primary row'>
-        <h1 className='h4 py-2 col-6'>HACKERNEWS by Lancer_Donnie</h1>
+        <h1 className='h4 py-2 col-6'>
+          HACKERNEWS <span className='h5 text-white'>by Lancer_Donnie</span>
+        </h1>
         <form
           onSubmit={handleSubmit}
           className=' align-self-center  col-6 px-auto'
@@ -33,7 +37,9 @@ const NavBar = props => {
             value={search}
             className='search'
             type='search'
+            placeholder='search for something...'
           />
+
           <button type='submit' className='btn btn-dark search-btn 5'>
             search
           </button>
