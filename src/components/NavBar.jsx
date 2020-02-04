@@ -24,8 +24,8 @@ const NavBar = props => {
   };
   return (
     <div>
-      <nav className='bg-primary row'>
-        <h1 className='h4 py-2 col-6'>
+      <nav className='row'>
+        <h1 className='color2 h4 py-2 col-6'>
           HACKERNEWS <span className='h5 text-white'>by Lancer_Donnie</span>
         </h1>
         <form

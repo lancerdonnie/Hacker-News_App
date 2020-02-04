@@ -6,6 +6,9 @@
 a {
   text-decoration: none;
 }
+nav {
+  background-color: #427dbc;
+}
 .search {
   height: 70%;
   outline: none;
@@ -83,4 +86,22 @@ a {
 .hov label,
 .hov input {
   cursor: pointer;
+}
+.color1 {
+  color: #e3effd;
+}
+.color2 {
+  color: #e0b841;
+}
+.color3 {
+  color: white;
+}
+.bgcolor {
+  background-color: #004085;
+}
+
+.spinner-border {
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
