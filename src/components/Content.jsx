@@ -25,7 +25,7 @@ const Content = props => {
         <span className='color2'>{points} points</span>
       </div>
       <div
-        className='text-dark'
+        className='storytext'
         dangerouslySetInnerHTML={{ __html: text || comment_text }}
       ></div>
       <div className='trail'>
